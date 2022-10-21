@@ -20,7 +20,7 @@ res.sendFile( "C:/Users/dhpar/weatherProject/index.html")
 app.post("/",(req,res,next)=>{
     const query=req.body.cityName
     const apiKey="2b0faf8d574629c30f3ee9d73df48c8b"
-    const unit="metric"
+    const unit="imperial"
     const url= "http://api.openweathermap.org/data/2.5/weather?q="+query+"&appid="+apiKey+"&units="+unit;
         http.get(url,(response)=>{
             console.log(response.statusCode)
